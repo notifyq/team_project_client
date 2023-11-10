@@ -1,0 +1,74 @@
+﻿<Application x:Class="team_project.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:team_project"
+             xmlns:svgc="http://sharpvectors.codeplex.com/svgc"
+             StartupUri="Windows/LoginWindow.xaml">
+    
+    <Application.Resources>
+        <Color x:Key="DarkBlue_1">#0F161D</Color>
+        <Color x:Key="Dark_1">#152026</Color>
+        <Color x:Key="DarkBlue_2">#152026</Color>
+
+        <SolidColorBrush x:Key="LoginBackground" Color="{StaticResource DarkBlue_1}"/>
+        <SolidColorBrush x:Key="WindowBackground" Color="{StaticResource Dark_1}"/>
+        <SolidColorBrush x:Key="OverlayBackground" Color="#152026"/>
+        <SolidColorBrush x:Key="ButtonMouseEnter" Color="#152026"/>
+        <SolidColorBrush x:Key="ButtonMouseLeave" Color="#000000"/>
+        <SolidColorBrush x:Key="ButtonOverlayMouseEnter" Color="#48515e"/>
+        <SolidColorBrush x:Key="ButtonOverlayMouseLeave" Color="#3A414C"/>
+
+
+        <Style TargetType="Button" x:Key="ButtonInOverlay">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBackgound" CornerRadius="4" Background="#3A414C" MouseEnter="ButtonBackgound_MouseEnter" MouseLeave="ButtonBackgound_MouseLeave">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              />
+                            
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="MinHeight" Value="50"></Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
+            <Setter Property="MaxHeight" Value="90"></Setter>
+            <Setter Property="MaxWidth" Value="500"></Setter>
+            <Setter Property="MinWidth" Value="300"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="FontWeight" Value="SemiBold"></Setter>
+            <Setter Property="Padding" Value="10"></Setter>
+            <Setter Property="Margin" Value="2,5,2,5"></Setter>
+        </Style>
+
+        <Style TargetType="Button" x:Key="ButtonMenu">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBackgound" CornerRadius="4" Background="Black" MouseEnter="ButtonMouseEnter" MouseLeave="ButtonMouseLeave">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                      />
+
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="MinHeight" Value="50"></Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
+            <Setter Property="MaxHeight" Value="90"></Setter>
+            <Setter Property="MaxWidth" Value="500"></Setter>
+            <Setter Property="MinWidth" Value="100"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="FontWeight" Value="SemiBold"></Setter>
+            <Setter Property="Padding" Value="10"></Setter>
+            <Setter Property="Margin" Value="2,5,2,5"></Setter>
+
+            
+        </Style>
+    </Application.Resources>
+</Application>
